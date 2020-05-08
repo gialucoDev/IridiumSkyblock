@@ -212,7 +212,8 @@ public class Utils {
     }
 
     public static boolean isBlockValuable(Block b) {
-        return IridiumSkyblock.getBlockValues().blockvalue.containsKey(XMaterial.matchXMaterial(b.getType())) || b.getState() instanceof CreatureSpawner || IridiumSkyblock.getConfiguration().limitedBlocks.containsKey(XMaterial.matchXMaterial(b.getType()));
+        // every block except air is valuable
+        return XMaterial.matchXMaterial(b.getType()) != XMaterial.AIR;
     }
 
     public static List<Island> getTopIslands() {

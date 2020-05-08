@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BlockValues {
+    public Double defaultblockvalue = 3.0;
     public Map<XMaterial, Double> blockvalue = new HashMap<XMaterial, Double>() {{
         put(XMaterial.EMERALD_BLOCK, 20.00);
         put(XMaterial.DIAMOND_BLOCK, 10.00);

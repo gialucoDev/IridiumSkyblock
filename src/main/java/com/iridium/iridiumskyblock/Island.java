@@ -466,7 +466,7 @@ public class Island {
             final Optional<XMaterial> xmaterial = XMaterial.matchXMaterial(item);
             if (!xmaterial.isPresent()) continue;
 
-            final Double blockValue = blockValueMap.get(xmaterial.get());
+            final Double blockValue = blockValueMap.getOrDefault(xmaterial.get(), blockValues.defaultblockvalue);
             if (blockValue == null) continue;
 
             value += (entry.getValue() * blockValue);
